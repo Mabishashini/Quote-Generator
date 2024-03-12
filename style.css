@@ -1,0 +1,87 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url(./bg-image.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    max-width: 400px;
+    min-width: 350px;
+    padding: 50px 30px;
+    text-align: center;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 20px 20px 25px rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: scale(1.05);
+}
+
+.container p {
+    line-height: 2;
+    font-size: 18px;
+}
+
+.container h3 {
+    margin: 20px 0 60px 0;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.container button {
+    border: none;
+    padding: 15px 45px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.container button:hover {
+    background-color: #45a049;
+}
+
+.container button:disabled {
+    background-color: rgba(76, 175, 80, 0.5);
+    cursor: not-allowed;
+    color: white;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 600px) {
+    .container {
+        max-width: 90%;
+        padding: 40px 20px;
+    }
+    .container p {
+        font-size: 16px; /* Decrease font size for better readability on smaller screens */
+    }
+    .container h3 {
+        font-size: 22px; /* Adjust heading font size for better visibility */
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .container {
+        min-width: 90%;
+    }
+    .container button {
+        padding: 12px 30px; /* Adjust button padding for better fit on smaller screens */
+    }
+}
