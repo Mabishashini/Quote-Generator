@@ -10,7 +10,9 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-image: url(./bg-image.jpg);
+    background: 
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), /* Linear gradient */
+        url(./bg-image.jpg); 
     background-size: cover;
     background-position: center;
 }
@@ -21,7 +23,7 @@ body {
     padding: 50px 30px;
     text-align: center;
     border-radius: 8px;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
     box-shadow: 20px 20px 25px rgba(0, 0, 0, 0.8);
     transition: transform 0.3s ease;
 }
