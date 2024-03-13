@@ -9,12 +9,19 @@ let getQuote =async () => {
     btn.innerText ="Loading..."
     author.innerText=""
     btn.disabled = true;
-    await fetch(url).then(data => data.json()).then((item) => {
-        quote.innerText = item.content;
-        author.innerText = item.author;
-        btn.innerText ="Get Quote"
-        btn.disabled = false;
-    })
+    try{
+
+        await fetch(url).then(data => data.json()).then((item) => {
+            quote.innerText = item.content;
+            author.innerText = item.author;
+            btn.innerText ="Get Quote"
+            btn.disabled = false;
+        })
+    }
+    catch(err){
+        btn.innerText = "Get Quote";
+        quote.innerText = "Something went wrong!!"
+    }
 }
 
 
