@@ -67,8 +67,8 @@ body {
 /* Media Queries */
 @media only screen and (max-width: 600px) {
     .container {
-        width:350px;
-        padding: 40px 20px;
+        width:30px;
+        padding: 20px 20px;
     }
     .container p {
         font-size: 16px; /* Decrease font size for better readability on smaller screens */
